@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Putatoe Assignment</string>
+    <string name="points_info_text">100 reward points = 1 putatoe credit\n1 putatoe credit = 1 rupee\nCan be redeemed to your bank account on amount above ₹ 10,000</string>
+</resources>

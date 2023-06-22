@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    tools:context=".wallet">
+    <LinearLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:padding="5sp"
+            app:tint="#C3E7EC" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:text="Putatoe Wallet"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="5sp"
+
+            />
+    </LinearLayout>
+
+  <ScrollView
+      android:layout_below="@+id/titlebar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="500sp"
+              android:layout_marginTop="110dp"
+              android:background="@drawable/white_screen"
+              />
+
+          <RelativeLayout
+              android:id="@+id/box"
+              android:layout_width="match_parent"
+              android:layout_height="165sp"
+              android:layout_marginStart="30sp"
+              android:layout_marginTop="30sp"
+              android:layout_marginEnd="30sp"
+              android:layout_marginBottom="15sp"
+              android:background="@drawable/border_box"
+              android:orientation="horizontal">
+              <TextView
+                  android:id="@+id/balance"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="₹ 0.0"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:textSize="40sp"
+                  android:layout_marginTop="15sp"
+                  android:layout_marginStart="20sp"
+                  />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Available Balance"
+                  android:id="@+id/balance_title"
+                  android:textColor="@color/white"
+                  android:layout_below="@+id/balance"
+                  android:layout_marginStart="15sp"/>
+              <RelativeLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/reward_points"
+                  android:layout_below="@+id/balance_title"
+                  >
+                  <TextView
+                      android:layout_width="40sp"
+                      android:layout_height="40sp"
+                      android:background="@drawable/circlebox"
+                      android:text="P"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:gravity="center"
+                      android:layout_marginStart="20sp"
+                      android:layout_marginTop="10sp"
+                      />
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="500"
+                      android:id="@+id/points"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:layout_marginTop="15sp"
+                      android:layout_marginStart="70sp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Reward Points"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:layout_marginTop="50sp"
+                      android:layout_marginStart="20sp"/>
+
+
+              </RelativeLayout>
+            <TextView
+                android:id="@+id/transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer Money"
+                android:background="@drawable/color_screen"
+                android:backgroundTint="@color/white"
+                android:padding="10sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+          </RelativeLayout>
+
+          <LinearLayout
+              android:id="@+id/points_info"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/box"
+              android:background="@drawable/color_screen"
+              android:padding="5sp"
+              android:layout_margin="5sp"
+              >
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/points_info_text"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  />
+          </LinearLayout>
+
+          <RelativeLayout
+              android:id="@+id/money"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/points_info"
+              android:layout_marginStart="5sp"
+              android:layout_marginTop="5sp"
+              android:layout_marginEnd="5sp"
+              android:layout_marginBottom="5sp"
+              android:background="@drawable/color_screen"
+              android:backgroundTint="@color/white"
+              android:padding="9sp">
+
+             <RelativeLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                 android:layout_marginStart="20sp"
+
+                 >
+                 <ImageView
+                     android:id="@+id/add_money"
+                     android:layout_width="60sp"
+                     android:layout_height="60sp"
+                     android:src="@drawable/add_money"
+                     android:layout_alignParentStart="true"
+                     app:tint="@color/primary_medium" />
+                 <TextView
+                     android:layout_width="60dp"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="@color/primary_medium"
+                     android:text="Add Money"
+                     android:layout_below="@+id/add_money"/>
+             </RelativeLayout>
+
+              <RelativeLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  >
+
+                  <ImageView
+                      android:id="@+id/redeem"
+                      android:layout_width="50sp"
+                      android:layout_height="50sp"
+                      android:gravity="center"
+                      android:src="@drawable/gift"
+                      app:tint="@color/primary_medium"
+                      android:layout_centerHorizontal="true"
+                      />
+
+                  <TextView
+                      android:layout_width="70dp"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/primary_medium"
+                      android:text="Redeem as Credit"
+                      android:gravity="center"
+                      android:layout_below="@+id/redeem"/>
+              </RelativeLayout>
+
+              <RelativeLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+
+                  >
+                  <ImageView
+                      android:id="@+id/bank"
+                      android:layout_width="50sp"
+                      android:layout_height="50sp"
+                      android:layout_marginEnd="40sp"
+                      android:src="@drawable/bank"
+                      android:layout_centerHorizontal="true"
+                      app:tint="@color/primary_medium" />
+                  <TextView
+                      android:layout_width="80sp"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/primary_medium"
+                      android:text="Send Money to Bank"
+                      android:gravity="center"
+                      android:layout_below="@+id/bank"/>
+              </RelativeLayout>
+
+
+
+          </RelativeLayout>
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/money"
+             >
+             <TextView
+                 android:id="@+id/transaction_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Transactions"
+                 android:textColor="@color/primary_medium"
+                 android:textSize="20sp"
+                 android:layout_marginStart="20sp"
+                 android:layout_marginTop="25sp"
+                 android:layout_marginBottom="25sp"
+                 />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="NO PAST TRANSACTIONS"
+                 android:textColor="@color/black"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="90sp"
+                 />
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:scaleType="centerCrop"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/nootransact"
+                 android:layout_below="@+id/transaction_title"/>
+         </RelativeLayout>
+
+      </RelativeLayout>
+
+
+
+  </ScrollView>
+</RelativeLayout>
